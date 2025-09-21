@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 @Service("email")
 @Primary
-public class EmailNotificationService  implements NotificationService {
+public class EmailNotificationService implements NotificationService {
 
     @Value("${email.host}")
     private String host;
@@ -14,9 +14,9 @@ public class EmailNotificationService  implements NotificationService {
     private String port;
 
     @Override
-    public void send(String message, String recipientEmail) {
+    public void sendNotification(String message, String recipientEmail) {
         // Simulate sending an email
-        System.out.println("Recipient" + recipientEmail);
+        System.out.println("Recipient: " + recipientEmail);
         System.out.println("Email Notification: " + message);
         System.out.println("Email Host: " + host);
         System.out.println("Email Port: " + port);

@@ -1,5 +1,5 @@
 package com.elkabani.userregistration;
 
 public interface NotificationService {
-    void send(String message, String recipientEmail);
+    void sendNotification(String message, String recipientEmail);
 }

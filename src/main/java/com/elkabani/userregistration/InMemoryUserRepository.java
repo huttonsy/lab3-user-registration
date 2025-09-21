@@ -19,4 +19,9 @@ public class InMemoryUserRepository implements UserRepository {
     public User findByEmail(String email) {
         return users.getOrDefault(email, null);
     }
+
+    @Override
+    public boolean exists(String email) {
+        return users.containsKey(email);
+    }
 }
